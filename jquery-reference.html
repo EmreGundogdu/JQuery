@@ -6,6 +6,7 @@
 </head>
 
 <body>
+    <!-- Example-1 -->
     <h3>Jquery Lessons</h3>
     <ul id="list">
         <li class="item">JQuery reference<a href="#">sadas</a></li>
@@ -17,15 +18,43 @@
         <li>Selectors</li>
         <li class="item">JQuery Plugins</li>
     </ul>
+
+    <!-- Example-2 -->
+    <a>Link</a>
+    <h3 id="header">Jquery Lessons</h3>
+    <ul id="list">
+        <li class="item">JQuery reference<a href="#">sadas</a></li>
+        <li>Selectors</li>
+        <li class="item">JQuery Plugins</li>
+    </ul>
     <script>
+        // Example-1
         console.log($("#list"));
         console.log($("h3"));
         console.log($(".item"));
-
         console.log($("ul li a")); //ul altında li altında a tag
         console.log($("li a")); //li altında a tag
-
         console.log($("#list li a"));
+
+        // Example-2
+        $("#header").css("color", "blue");
+        $("#list a").css("text-decoration", "none");
+        $("a").css("text-decoration", "none");
+
+        let styles = {
+            "color": "yellow",
+            "font-size": "20px",
+            "border": "1px solid red"
+        }
+        $("#list li").css(styles);
+        $("a").css({
+            "color": "green",
+            "font-size": "50px",
+            "border": "1px solid red"
+        })
+        $(".item").css({
+            display: "none"
+        })
     </script>
 </body>
 
