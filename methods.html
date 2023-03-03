@@ -3,6 +3,16 @@
 <head>
     <title>JQuery methods</title>
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+            display: none;
+        }
+
+        .green {
+            background-color: greenyellow;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,9 +22,13 @@
         <li>JQuery methods</li>
         <li>JQuery animations</li>
     </ul>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ72qGJW9FpIb54HtQUJFy7Upm7DXADLQttyQ&usqp=CAU"
+        width="200">
+
     <input id="test" type="text" placeholder="FullName" value="Value of input">
     <input id="ad" type="text" placeholder="Name" value="Name">
-    <input id="soyad" type="text" placeholder="Surname" value="Surname">
+    <input id="soyad" type="text" class="green" placeholder="Surname" value="Surname">
     <button id="btnKaydet" onclick="adsoyad();">Show on console</button>
 </body>
 
@@ -25,10 +39,15 @@
     $("h1").text("Javascript");
     console.log($("input").val());
     $("#test").val("Value of input has been changed");
+    $("img").attr("width", "400")
     function adsoyad() {
         var ad = $("#ad").val();
         var soyad = $("#soyad").val();
         console.log(ad + " " + soyad);
+        $("#ad").addClass("highlight");
+        $("#soyad").removeClass("green");
+        $("#ad").toggleClass("highlight"); //class eklenmişse kalırır eklenmemişse ekler
+        $("#soyad").toggleClass("green");//class eklenmişse kalırır eklenmemişse ekler
     }
 </script>
 
