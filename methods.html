@@ -12,7 +12,10 @@
         <li>JQuery methods</li>
         <li>JQuery animations</li>
     </ul>
-    <input type="text" placeholder="FullName">
+    <input id="test" type="text" placeholder="FullName" value="Value of input">
+    <input id="ad" type="text" placeholder="Name" value="Name">
+    <input id="soyad" type="text" placeholder="Surname" value="Surname">
+    <button id="btnKaydet" onclick="adsoyad();">Show on console</button>
 </body>
 
 <script>
@@ -20,6 +23,13 @@
     console.log($("ul").text());
 
     $("h1").text("Javascript");
+    console.log($("input").val());
+    $("#test").val("Value of input has been changed");
+    function adsoyad() {
+        var ad = $("#ad").val();
+        var soyad = $("#soyad").val();
+        console.log(ad + " " + soyad);
+    }
 </script>
 
 </html>
