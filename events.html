@@ -21,7 +21,8 @@
         $(document).ready(function () {
             $("#p1").click(function () {
                 console.log("tıklandı")
-                $(this).addClass("paragraf")
+                // $(this).addClass("paragraf") Tıklanılan item için |this|
+                $("p").addClass("paragraf") //bütün p tagları için
             });
             console.log("Document ready")
         });
