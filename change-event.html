@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+
+<body>
+
+    <form>
+        <p>Ad: <input type="text" class="control" /></p>
+        <p>Hobiler: <select class="control">
+                <option value="spor" selected>Spor yapmak</option>
+                <option value="sinema" selected>Sinemaya gitmek</option>
+            </select></p>
+    </form>
+    <script>
+        $(document).ready(function () {
+            $(".control").change(function () {
+                console.log($(this).val());
+            })
+        })
+    </script>
+</body>
