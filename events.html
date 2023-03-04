@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+
+<body>
+    <p id="p1">Web development</p>
+    <p id="p2">Web development</p>
+    <p id="p3">Web development</p>
+    <p id="p4">Web development</p>
+
+    <script>
+        $(document).ready(function () {
+            $("#p1").click(function () {
+                console.log("tıklandı")
+            })
+            console.log("Document ready")
+        });
+        $(function () {
+
+        });
+    </script>
+</body>
