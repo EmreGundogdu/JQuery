@@ -3,6 +3,12 @@
 <head>
     <title>Jquery</title>
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <style>
+        .paragraf {
+            color: red;
+            font-size: 25px;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +21,8 @@
         $(document).ready(function () {
             $("#p1").click(function () {
                 console.log("tıklandı")
-            })
+                $(this).addClass("paragraf")
+            });
             console.log("Document ready")
         });
         $(function () {
