@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    </style>
+</head>
+
+<body>
+    <p>JQuery derlseri</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            })
+        })
+        $(document).ready(function () {
+            $("#show").click(function () {
+                $("p").show();
+            })
+        })
+    </script>
+</body>
+
+</html>
