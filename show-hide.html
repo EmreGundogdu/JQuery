@@ -15,19 +15,24 @@
 
 
     <script>
+        // $(document).ready(function () {
+        //     $("#hide").click(function () {
+        //         $("p").hide("slow");
+        //     })
+        // })
         $(document).ready(function () {
             $("#hide").click(function () {
-                $("p").hide();
+                $("p").hide(3000);
             })
         })
         $(document).ready(function () {
             $("#show").click(function () {
-                $("p").show();
+                $("p").show("fast");
             })
         })
         $(document).ready(function () {
             $("#toggle").click(function () {
-                $("p").toggle();
+                $("p").toggle("fast");
             })
         })
     </script>
