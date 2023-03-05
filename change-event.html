@@ -8,15 +8,19 @@
 <body>
 
     <form>
-        <p>Ad: <input type="text" class="control" /></p>
-        <p>Hobiler: <select class="control">
+        <p>Ad: <input type="text" class="inputcontrol" /></p>
+        <p>Hobiler: <select class="selectcontrol">
                 <option value="spor" selected>Spor yapmak</option>
                 <option value="sinema" selected>Sinemaya gitmek</option>
             </select></p>
     </form>
     <script>
+        //change function: select ve inputlarda da çalışır
         $(document).ready(function () {
-            $(".control").change(function () {
+            $(".inputcontrol").change(function () {
+                console.log($(this).val());
+            })
+            $(".selectcontrol").change(function () {
                 console.log($(this).val());
             })
         })
