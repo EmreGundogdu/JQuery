@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0
+        }
+
+        #message-box {
+            background-color: green;
+            text-align: center;
+            color: white;
+        }
+
+        #header {
+            cursor: pointer;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #fff;
+        }
+
+        #content {
+            height: 200px;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#header").click(function () {
+                $("#content").toggle("fast");
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <div id="message-box">
+        <div id="header">Mesajınız var</div>
+        <div id="content"></div>
+    </div>
+
+</body>
+
+</html>
