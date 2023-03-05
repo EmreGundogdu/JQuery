@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    </style>
+</head>
+
+<body>
+    <p>JQuery dersleri</p>
+    <button id="slideup">SlideUp</button>
+    <button id="slidedown">SlideDown</button>
+    <button id="toggle">Aç/Kapa</button>
+
+
+    <p id="das">JQuery dersleri</p>
+    <button id="fadein">fadein</button>
+    <button id="fadeout">fadeout</button>
+    <button id="fadetoggle">Aç/Kapa</button>
+    <button id="fadeto">Aç/Kapa</button>
+
+
+    <script>
+        $(document).ready(function () {
+            // $("#slideup").click(function () {
+            //     $("p").slideUp();
+            // })
+            $("#slideup").click(function () {
+                $("p").slideUp(300);
+            })
+            $("#slidedown").click(function () {
+                $("p").slideDown();
+            })
+            $("#toggle").click(function () {
+                $("p").slideToggle();
+            })
+            //--------------------------------------
+            $("#fadein").click(function () {
+                $("#das").fadeIn(300);
+            })
+            $("#fadeout").click(function () {
+                $("#das").fadeOut("fast");
+            })
+            $("#fadeto").click(function () {
+                $("#das").fadeTo("slow", 0.3);
+            })
+            $("#fadetoggle").click(function () {
+                $("#das").fadeToggle("fast");
+            })
+        });
+    </script>
+</body>
+
+</html>
