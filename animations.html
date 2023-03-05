@@ -19,20 +19,22 @@
 
     <button id="animate">DEĞİŞTİR</button>
     <div id="box">
-
+        Merhaba
     </div>
 
 
     <script>
         $(document).ready(function () {
+            var box = $("#box");
             $("#animate").click(function () {
-                $("#box").animate({
+                box.animate({
                     left: '200px',
                     width: '300px',
                     height: '300px'
                 }, 200, function () {
                     alert("animasyon bitti")
                 })
+                box.animate({ fontSize: '30px' }, "fast")
             })
         })
     </script>
