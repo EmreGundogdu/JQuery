@@ -10,6 +10,7 @@
     <p>JQuery derlseri</p>
     <button id="hide">Hide</button>
     <button id="show">Show</button>
+    <button id="toggle">Aç/Kapa</button>
 
 
 
@@ -22,6 +23,11 @@
         $(document).ready(function () {
             $("#show").click(function () {
                 $("p").show();
+            })
+        })
+        $(document).ready(function () {
+            $("#toggle").click(function () {
+                $("p").toggle();
             })
         })
     </script>
