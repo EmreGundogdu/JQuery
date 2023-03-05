@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<style>
+    #wrapper {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    body {
+        font-size: 180%;
+    }
+
+    input {
+        padding: 15px;
+        font-size: 25px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        width: 520px;
+    }
+
+    label {
+        display: inline-block;
+        width: 200px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    button {
+        background-color: green;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    #error {
+        color: red;
+        text-align: left;
+    }
+</style>
+
+<body>
+    <div id="wrapper">
+        <div id="error"></div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="email">
+        </div>
+        <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input type="text" name="telefon" id="telefon" placeholder="telefon">
+        </div>
+        <div class="form-group">
+            <label for="parola">Parola</label>
+            <input type="text" name="parola" id="parola" placeholder="parola">
+        </div>
+        <div class="form-group">
+            <label for="reparola">Parola Tekrar</label>
+            <input type="text" name="reparola" id="reparola" placeholder="parola tekrar">
+        </div>
+        <button id="btn">Kaydet</button>
+    </div>
+
+
+    <script>
+        $(function () {
+            var errorMessage = "";
+            $("#btn").click(function () {
+                if ($("#email").val() == "") {
+                    errorMessage += "<p>email zorunlu</p>"
+                }
+                if (errorMessage != "") {
+                    $("#error").html(errorMessage)
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
